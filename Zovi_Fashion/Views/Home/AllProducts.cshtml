@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Zovi_Fashion.Models.Product>
+
+@{
+    ViewData["Title"] = "ViewProductsByBrand";
+}
+
+<div class="text-center">
+    <h1 class="display-4">All Product</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img class="card-img-top" src="../../productphotos/@item.ProductID@item.Extension" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">@item.ProductName</h5>
+                <a class="btn btn-warning" asp-action="ProductDetails" asp-route-id="@item.ProductID">View Product Details</a>
+            </div>
+        </div>
+    }
+</div>

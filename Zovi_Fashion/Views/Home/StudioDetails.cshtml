@@ -1,0 +1,14 @@
+﻿@model Zovi_Fashion.Models.Studio
+
+@{
+    ViewData["Title"] = "StudioDetails";
+    var item = Model;
+}
+
+
+<h1>@item.Title</h1>
+<h3>@item.PostDate</h3>
+<img src="~/studiophotos/@item.StudioID@item.Extension" />
+<p>
+    @item.StudioDesc
+</p>
